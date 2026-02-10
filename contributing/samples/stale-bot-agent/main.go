@@ -190,7 +190,7 @@ func main() {
 	log.Printf("--- Starting Stale Bot for %s/%s ---", Owner, Repo)
 	log.Printf("Concurrency level set to %d", ConcurrencyLimit)
 
-	model, err := gemini.NewModel(ctx, geminiModel, &genai.ClientConfig{APIKey: "AIzaSyDK50_Wz6sb_O0giuoO4xepdOkO6L4JvZ8"})
+	model, err := gemini.NewModel(ctx, geminiModel, &genai.ClientConfig{APIKey: os.Getenv("GOOGLE_API_KEY")})
 	if err != nil {
 		log.Fatalf("Failed to create model: %v", err)
 	}
