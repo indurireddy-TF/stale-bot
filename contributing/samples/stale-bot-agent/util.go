@@ -64,10 +64,6 @@ func doRequest(req *http.Request) (*http.Response, error) {
 	req.Header.Set("Authorization", "token "+GitHubToken)
 	req.Header.Set("Accept", "application/vnd.github.v3+json")
 
-	// ⚠️ Avoid logging tokens in production
-	log.Println("GITHUBTOKENCREATION=================")
-	log.Println(len(GitHubToken), "-------------------------")
-
 	var resp *http.Response
 	var err error
 	backoff := time.Second
