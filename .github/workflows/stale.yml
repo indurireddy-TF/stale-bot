@@ -3,6 +3,10 @@ name: ADK Stale Issue Auditor (Go)
 on:
   workflow_dispatch:
 
+  schedule:
+    # This runs at 6:00 AM UTC (10 PM PST)
+    - cron: '0 6 * * *'
+
 jobs:
   audit-stale-issues:
     if: github.repository == 'indurireddy-TF/stale-bot'
