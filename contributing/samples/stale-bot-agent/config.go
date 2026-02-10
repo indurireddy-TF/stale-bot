@@ -42,8 +42,8 @@ func InitConfig() {
 	}
 
 	// Repo
-	Owner = getEnv("OWNER", "indurireddy-TF")
-	Repo = getEnv("REPO", "stale-bot")
+	Owner = getEnv("OWNER", "google")
+	Repo = getEnv("REPO", "adk-go")
 
 	// Thresholds (hours)
 	STALE_HOURS_THRESHOLD = getEnvFloat("STALE_HOURS_THRESHOLD", 168.0)
