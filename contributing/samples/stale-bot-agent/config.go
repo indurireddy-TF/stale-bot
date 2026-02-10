@@ -46,11 +46,8 @@ func InitConfig() {
 	Repo = getEnv("REPO", "stale-bot")
 
 	// Thresholds (hours)
-	STALE_HOURS_THRESHOLD = 0.05             //getEnvFloat("STALE_HOURS_THRESHOLD", 168.0)
-	CLOSE_HOURS_AFTER_STALE_THRESHOLD = 0.05 /*getEnvFloat(
-		"CLOSE_HOURS_AFTER_STALE_THRESHOLD",
-		168.0,
-	)*/
+	STALE_HOURS_THRESHOLD = getEnvFloat("STALE_HOURS_THRESHOLD", 168.0)
+	CLOSE_HOURS_AFTER_STALE_THRESHOLD =getEnvFloat("CLOSE_HOURS_AFTER_STALE_THRESHOLD",168.0)
 
 	// Performance
 	ConcurrencyLimit = getEnvInt("CONCURRENCY_LIMIT", 3)
